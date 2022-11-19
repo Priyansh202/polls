@@ -6,7 +6,7 @@ from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login,logout
 from gfg import  settings
-from .task import *
+
 
 
 
@@ -113,7 +113,7 @@ def signout(request):
     return redirect('home')
 
 def profile(request):
-    sleepy.delay(30)
+    
     contex={
         'user':request.user
 
